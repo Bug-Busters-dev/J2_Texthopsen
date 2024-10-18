@@ -7,7 +7,7 @@ public class Texthopsen {
         String ANSI_BLUE = "\u001B[34m";
         String ANSI_PURPLE = "\u001B[35m";
 
-        String dateipfad = "data\\hopsen1.txt";
+        String dateipfad = "data\\hopsen2.txt";
 
         FileReaderx fileReaderx = new FileReaderx();
         char[] extractedLetters = fileReaderx.redarray(dateipfad, 0);
@@ -36,6 +36,8 @@ public class Texthopsen {
 
             if (pos1InRange && pos2InRange && hopser.pos1.get(posi1) == i && hopser.pos2.get(posi2) == i) {
                 System.out.print(ANSI_PURPLE + extractedLetters[i] + ANSI_RESET);
+                if (posi1 < hopser.pos1.size()) posi1++;
+                if (posi2 < hopser.pos2.size()) posi2++;
             } else if (pos1InRange && hopser.pos1.get(posi1) == i) {
                 System.out.print(ANSI_RED + extractedLetters[i] + ANSI_RESET);
                 if (posi1 < hopser.pos1.size()) posi1++;
