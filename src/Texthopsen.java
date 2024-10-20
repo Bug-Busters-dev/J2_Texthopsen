@@ -7,7 +7,7 @@ public class Texthopsen {
         String ANSI_BLUE = "\u001B[34m";
         String ANSI_PURPLE = "\u001B[35m";
 
-        String dateipfad = "data\\hopsen2.txt";
+        String dateipfad = "data\\hopsen1.txt";
 
         FileReaderx fileReaderx = new FileReaderx();
         char[] extractedLetters = fileReaderx.redarray(dateipfad, 0);
