@@ -1,7 +1,6 @@
 
 public class Texthopsen {
     public static void main(String[] args) throws Exception {
-
         String ANSI_RESET = "\u001B[0m";
         String ANSI_RED = "\u001B[31m";
         String ANSI_BLUE = "\u001B[34m";
@@ -10,9 +9,10 @@ public class Texthopsen {
         String dateipfad = "data\\hopsen1.txt";
 
         FileReaderx fileReaderx = new FileReaderx();
-        char[] extractedLetters = fileReaderx.redarray(dateipfad, 0);
+        String text = fileReaderx.readText(dateipfad, 0);
 
         Converter converter = new Converter();
+        char[] extractedLetters = converter.textToLetters(text);
         int[] extractedNumbers = converter.lettersToNumbers(extractedLetters);
 
         Hopser hopser = new Hopser();
