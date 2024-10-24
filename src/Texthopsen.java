@@ -13,18 +13,10 @@ public class Texthopsen {
 
         Converter converter = new Converter();
         char[] extractedLetters = converter.textToLetters(text);
-        int[] extractedNumbers = converter.lettersToNumbers(extractedLetters);
 
         Hopser hopser = new Hopser();
 
-        int win = hopser.hopsen(0, 1, extractedNumbers);
-
-        System.out.println("--------------------------------------------------------------------------------------------------------------------");
-
-        for (int i = 0; i < extractedNumbers.length; i++){
-            System.out.print(extractedNumbers[i]);
-        }
-        System.out.println();
+        int win = hopser.hopsen(0, 1, extractedLetters);
 
         System.out.println("--------------------------------------------------------------------------------------------------------------------");
 
@@ -58,7 +50,7 @@ public class Texthopsen {
 
         System.out.println("--------------------------------------------------------------------------------------------------------------------");
 
-        System.out.println("Der Text ist " + extractedNumbers.length + " Buchstaben lang.");
+        System.out.println("Der Text ist " + extractedLetters.length + " Buchstaben lang.");
 
         if (win == 1){
             System.out.println("Bella(1) hat mit " + hopser.nededjumps1 + " Schprüngen gewonnen.");
