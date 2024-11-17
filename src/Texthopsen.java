@@ -6,7 +6,7 @@ public class Texthopsen {
         String ANSI_BLUE = "\u001B[34m";
         String ANSI_PURPLE = "\u001B[35m";
 
-        String dateipfad = "data\\hopsen5.txt";
+        String dateipfad = args[0];
 
         FileReaderx fileReaderx = new FileReaderx();
         String text = fileReaderx.readText(dateipfad, 0);
