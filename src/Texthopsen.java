@@ -8,6 +8,7 @@ public class Texthopsen {
 
         String dateipfad = args[0];
 
+
         FileReaderx fileReaderx = new FileReaderx();
         String text = fileReaderx.readText(dateipfad, 0);
 
@@ -53,13 +54,13 @@ public class Texthopsen {
         System.out.println("Der Text ist " + extractedLetters.length + " Buchstaben lang.");
 
         if (win == 1){
-            System.out.println("Bella(1) hat mit " + hopser.nededjumps1 + " Schprüngen gewonnen.");
-            System.out.println("Amira(2) war auf Position " + (hopser.currendPos2+1) );
-            System.out.println("Bella(1) war auf Position " + (hopser.currendPos1+1) );
+            System.out.println("Bela(1) hat mit " + hopser.nededjumps1 + " Sprüngen gewonnen.");
+            System.out.println("Amira(2) springt aus dem Text heraus auf Position " + (hopser.currendPos2+1) );
+            System.out.println("Bela(1) springt aus dem Text heraus auf Position " + (hopser.currendPos1+1) );
         } else if (win == 2){
-            System.out.println("Amira(2) hat mit " + hopser.nededjumps2 + " Schprüngen gewonnen.");
-            System.out.println("Bella(1) war auf Position " + (hopser.currendPos1+1) );
-            System.out.println("Amira(2) war auf Position " + (hopser.currendPos2+1) );
+            System.out.println("Amira(2) hat mit " + hopser.nededjumps2 + " Sprüngen gewonnen.");
+            System.out.println("Bela(1) springt aus dem Text heraus auf Position " + (hopser.currendPos1+1) );
+            System.out.println("Amira(2) springt aus dem Text heraus auf Position " + (hopser.currendPos2+1) );
         }
     }
 }
